@@ -1,41 +1,27 @@
-Friend Management API
+Web Scrapping and Pdf Download API
 
-1)	 ADD NEW USER
+Build and run
 
-http://ec2-18-222-233-172.us-east-2.compute.amazonaws.com:8080/addUser
+1)Using the terminal
+Go on the project's root folder, then type:
 
-{
- "email": "a@gmail.com"
-}
+mvn spring-boot:run
 
-
-2)	ADD Friends
-
-{
- "userfriends": ["a@gmail.com",
-                 "b@gmail.com"
-                 ]
-}
-
-3)	Delete friends
-
-{
- "email1": "a@gmail.com",
- "email2" :"b@gmail.com"
-}
-
-4)	Get FriendList of User
-
-{
- "email": "a@gmail.com"
-}
+2) Using Eclipse or ANy ide
+Import as Existing Maven Project and run it as Java Application(Selecting FriendApplication)  or as  Spring Boot App.
 
 
-5)	GET ALL CONNECTIONS AT Kth Distance from user.
+Launch the application and go on http://localhost:8080/
 
-{
- "email": "a@gmail.com",
- "k":3
-}
+1)Web Scrapping --
+        http://localhost:8080/getProductDetails          
+        
+        give query parameter--url 
+        Values(url of Amazon product Page u wanna Scrap)
+        
+2) Pdf Generation
+  http://localhost:8080/downloadPdf
+        
+        
+        give above API return payload in Body
 
-where k is distance 
